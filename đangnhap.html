@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="login-form">
+            <h1>Đăng nhập</h1>
+            <div class="input-box">
+                <input type="text" name="username" id="username" placeholder="UserName" required>
+                <i class='bx bx-user-circle'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <div class="Remember-Forgot">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+                <a href="#">Forgot password</a>
+            </div>
+            <button type="button" class="btn" id="login-btn">Đăng nhập</button>
+            <div class="Register-link">
+                <p>Chưa có tài khoản? <a href="đăngky.html">Đăng ký</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Tài khoản giả lập
+        const storedUser = {
+            username: "JinxX111",
+            password: "111111"
+        };
+
+        // Sự kiện đăng nhập
+        const loginBtn = document.getElementById("login-btn");
+        loginBtn.addEventListener("click", () => {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Kiểm tra thông tin đăng nhập
+            if (username === storedUser.username && password === storedUser.password) {
+                alert("Đăng nhập thành công! Chào mừng, " + username + ".");
+                localStorage.setItem("isLoggedIn", true); // Lưu trạng thái đăng nhập
+                window.location.href = "index.html"; // Chuyển sang trang chính
+            } else {
+                alert("Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.0.29, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo-1-344x108.png" type="image/x-icon">
+    <meta name="description" content="">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/web/assets/gdpr-plugin/gdpr-styles.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <style>
+        .cart-container {
+            top: 30px 50px;
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px 50px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 0 40px #b0afb4;
+        }
+
+        h1,
+        h2 {
+            color: #1409af;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .cart-items,
+        .add-item-container,
+        .payment-container {
+            margin: 30px 10px;
+            padding: auto;
+
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #add-item-button,
+        #confirm-payment-button,
+        #pay-now-button {
+            padding: 10px 20px;
+            background-color: #fc066c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #pay-now-button {
+            display: none;
+        }
+
+        #add-item-button:hover,
+        #confirm-payment-button:hover,
+        #pay-now-button:hover {
+            background-color: #eb2793;
+        }
+
+        #total-price {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="menu menu2 cid-ut3ZVEEpiS" once="menu" id="menu2-1s">
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="https://mobiri.se">
+                            <img src="assets/images/logo-1-344x108.png" alt="Mobirise" style="height: 4.7rem;">
+                        </a>
+                    </span>
+
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item dropdown"><a class="nav-link link dropdown-toggle text-white display-4"
+                                href="#" data-toggle="dropdown-submenu" aria-expanded="false">Danh Mục</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" data-toggle="dropdown-submenu" aria-expanded="false">Thiết bị điện
+                                        tử</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white text-primary display-4"
+                                            href="page1.html">Điện thoại di động</a><a
+                                            class="dropdown-item text-white text-primary display-4" href="page5.html"
+                                            aria-expanded="false">Laptop</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Máy ảnh&nbsp;</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Camera</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Đồng hồ</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Sức khoẻ &amp; Làm
+                                        đẹp</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Chăm sóc da</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Dụng cụ làm đẹp</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Chăm sóc tóc</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Trang điểm</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Nước hoa</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Dành cho nam giới</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Hàng bé &amp; Đồ
+                                        chơi</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thực phẩm cho bé</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thời trang cho bé</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Dụng cụ vệ sinh</a><a
+                                            class="dropdown-item text-white display-4" href="#" aria-expanded="false">Đồ
+                                            chơi cho bé</a><a class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Chăm sóc cơ thể</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Hàng gia dụng
+                                        &amp;&nbsp; Đời sống</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Dụng cụ điện</a><a
+                                            class="dropdown-item text-white display-4" href="#" aria-expanded="false">Đồ
+                                            nội thất</a><a class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Dành cho nhà bếp</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Phòng ngủ</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Văn phòng phẩm</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Phòng tắm</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Thể thao &amp; Du
+                                        Lịch</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Vali &amp; Túi du lịch</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Giày thể thao</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thể thao</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Trang phục</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Phụ kiện</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Siêu thị tạp
+                                        hoá</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thực phẩm&nbsp;</a><a
+                                            class="dropdown-item text-white display-4" href="#" aria-expanded="false">Đồ
+                                            uống</a><a class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Đồ ăn vặt</a><a
+                                            class="dropdown-item text-white display-4" href="#" aria-expanded="false">Vệ
+                                            sinh nhà cửa</a></div>
+                                </div>
+                                <div class="dropdown"><a class="dropdown-item dropdown-toggle text-white display-4"
+                                        href="#" aria-expanded="false" data-toggle="dropdown-submenu">Thời trang</a>
+                                    <div class="dropdown-menu dropdown-submenu"><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thời trang nữ</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Thời trang nam</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Phụ kiện</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Túi xách</a><a
+                                            class="dropdown-item text-white display-4" href="#"
+                                            aria-expanded="false">Mắt kính</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="icons-menu">
+                        <a class="iconfont-wrapper" href="page2.html" target="_blank">
+                            <span class="p-2 mbr-iconfont mbrib-credit-card"
+                                style="font-size: 40px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                        </a>
+                        <a class="iconfont-wrapper" href="page3.html" target="_blank">
+                            <span class="p-2 mbr-iconfont mbrib-user"
+                                style="font-size: 40px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                        </a>
+                        <a class="iconfont-wrapper" href="page4.html" target="_blank">
+                            <span class="p-2 mbr-iconfont mbri-shopping-cart"
+                                style="font-size: 40px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                        </a>
+
+                    </div>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4"
+                            href="page6.html"><span class="mbrib-login mbr-iconfont mbr-iconfont-btn"></span>Đăng
+                            nhập</a></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div class="cart-container">
+        <h1>Giỏ hàng</h1>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <p>Tổng cộng: <span id="total-price">0</span> VND</p>
+        </div>
+
+        <div class="add-item-container">
+            <h2>Thêm sản phẩm mới</h2>
+            <input type="text" id="product-name" placeholder="Tên sản phẩm">
+            <input type="number" id="product-price" placeholder="Giá sản phẩm">
+            <button id="add-item-button">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="payment-container">
+            <h2>Phương thức thanh toán</h2>
+            <div>
+                <label>
+                    <input type="radio" name="payment-method" value="cod" checked>
+                    Thanh toán khi nhận hàng (COD)
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="payment-method" value="online">
+                    Thanh toán trực tuyến
+                </label>
+            </div>
+            <button id="pay-now-button">Thanh toán trực tuyến</button>
+            <script>
+                // Sự kiện nhấn nút Thanh toán trực tuyến
+                document.getElementById('pay-now-button').addEventListener('click', function () {
+                    // Chuyển hướng tới giao diện thanh toán
+                    window.location.href = "page2.html"; // Đường dẫn giao diện thanh toán
+                });
+            </script>
+            <button id="confirm-payment-button">Xác nhận đặt hàng</button>
+        </div>
+    </div>
+
+    <section class="engine"><a href="https://mobirise.info/y">free html website templates</a></section>
+    <section class="header13 cid-utUWeVuwEI" id="header13-2o">
+
+        <div class="align-center container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer4 cid-utJy8hCrsV" once="footers" id="footer4-26">
+
+        <div class="container">
+            <div class="row mbr-white">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="media-wrap">
+                        <a href="">
+                            <img src="assets/images/logo-2-96x30.png" alt="Mobirise">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong><em>LIÊN HỆ VỚI LAZADA
+                            </em></strong>
+                        <div><br></div>
+                    </h5>
+                    <p class="mbr-text mbr-fonts-style mb-4 display-7"><strong>Hotline &amp; Chat trực tuyến (24/7)
+                            <br>Trung tâm hỗ trợ
+                            <br>Hướng dẫn đặt hàng
+                            <br>Giao hàng &amp; Nhận hàng
+                            <br>Chính sách hàng nhập khẩu
+                            <br>Hướng dẫn đổi trả hàng</strong></p>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                        <strong>Follow Us</strong>
+                    </h5>
+                    <div class="social-row display-7">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="mbr-iconfont socicon-fundable socicon"
+                                    style="font-size: 30px; color: rgb(68, 121, 217); fill: rgb(68, 121, 217);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.linkedin.com/company/lazada?spm=a2o4n.homepage.sns.d_lnk.39aa3bdcbjr5O9"
+                                target="_blank">
+                                <span class="mbr-iconfont socicon-logmein socicon"
+                                    style="font-size: 30px; color: rgb(68, 121, 217); fill: rgb(68, 121, 217);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.instagram.com/lazada_sg/?spm=a2o4n.homepage.sns.d_ins.39aa3bdccL398Y"
+                                target="_blank">
+                                <span class="mbr-iconfont socicon-instagram socicon"
+                                    style="font-size: 30px; color: rgb(239, 31, 101); fill: rgb(239, 31, 101);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/channel/UC84pTcutLPrVHkRBx4QSh5g" target="_blank">
+                                <span class="mbr-iconfont socicon-youtube socicon"
+                                    style="font-size: 30px; color: rgb(255, 0, 0); fill: rgb(255, 0, 0);"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong><em>LAZADA VIỆT NAM
+                            </em></strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><br></li>
+                        <li class="mbr-text item-wrap"><strong>Về Lazada Việt Nam
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Bán hàng cùng Lazada
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Chương trình Lazada Afﬁliate
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Tuyển dụng
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Điều khoản sử dụng
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Chính sách bảo mật
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Báo chí
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Bảo vệ quyền sở hữu trí tuệ
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Quy chế hoạt động sàn Lazada
+                            </strong></li>
+                        <li class="mbr-text item-wrap"><strong>Quy trình giải quyết tranh chấp, khiếu nại</strong></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong><em>LAZADA - NỀN TẢNG MUA
+                                SẮM TRỰC TUYẾN HÀNG ĐẦU VIỆT NAM</em></strong></h5>
+                    <ul class="list mbr-fonts-style display-4">
+                        <li class="mbr-text item-wrap"><br></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>
+    <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/dropdown/js/nav-dropdown.js"></script>
+    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+    <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+
+
+
+    <input name="cookieData" type="hidden" data-cookie-customDialogSelector='null' data-cookie-colorText='#ffffff'
+        data-cookie-colorBg='rgba(239, 31, 101, 0.85)' data-cookie-textButton='Agree!!!'
+        data-cookie-colorButton='#0d226e' data-cookie-colorLink='#ffffff' data-cookie-underlineLink='true'
+        data-cookie-text="We use cookies to give you the best experience. Read our <a href='privacy.html'>cookie policy</a>.">
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;">
+            <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+    <script src="script.js"></script>
+</body>
+
+</html>

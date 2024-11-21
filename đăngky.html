@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="register-form">
+            <h1>Đăng ký</h1>
+            <div class="input-box">
+                <input type="text" name="username" id="username" placeholder="UserName" required>
+                <i class='bx bx-user-circle'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password"
+                    required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <button type="button" class="btn" id="register-btn">Đăng ký</button>
+            <div class="Register-link">
+                <p>Đã có tài khoản? <a href="đangnhap.html">Đăng nhập</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const registerBtn = document.getElementById("register-btn");
+        const registerForm = document.getElementById("register-form");
+
+        registerBtn.addEventListener("click", () => {
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirm-password").value.trim();
+
+            if (!username) {
+                alert("Tên người dùng không được để trống!");
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Email không hợp lệ!");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Mật khẩu xác nhận không khớp!");
+                return;
+            }
+
+            // Lấy danh sách người dùng từ LocalStorage
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            
+            // Kiểm tra xem tài khoản đã tồn tại chưa
+            const isUserExist = users.some(user => user.username === username);
+            if (isUserExist) {
+                alert("Tên người dùng đã tồn tại! Vui lòng chọn tên khác.");
+                return;
+            }
+
+            // Thêm người dùng mới vào danh sách
+            users.push({ username, email, password });
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Đăng ký thành công! Bạn có thể đăng nhập.");
+            registerForm.reset(); // Xóa thông tin sau khi đăng ký thành công
+            window.location.href = "đangnhap.html"; // Chuyển đến trang đăng nhập
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+
+</html>
