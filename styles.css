@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background: url(https://i.pinimg.com/originals/a0/24/60/a0246079cec6c06b5b8588570cfe0878.gif);
     background-size: cover;
     background-position: center;
-
 }
+
 
 .wrapper {
     width: 420px;
